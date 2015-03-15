@@ -13,7 +13,7 @@ public class ScoreTrigger : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other){
-		audio.Play ();
+		GetComponent<AudioSource>().Play ();
 		Destroy(other.gameObject);
 		PointsDisplay.GetComponent<Points> ().points = PointsDisplay.GetComponent<Points> ().points + PointsToAdd;
 

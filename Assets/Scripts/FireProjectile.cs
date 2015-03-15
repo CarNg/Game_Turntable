@@ -17,7 +17,7 @@ public class FireProjectile : MonoBehaviour {
 		as Rigidbody;
 			
 		newPro.AddForce (newPro.transform.up * force);
-		audio.Play();
+		GetComponent<AudioSource>().Play();
 	}
 
 	public void stop(){

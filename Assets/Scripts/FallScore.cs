@@ -7,7 +7,7 @@ public class FallScore : MonoBehaviour {
 	public GameObject Points;
 
 	void OnTriggerEnter(Collider other){
-		audio.Play ();
+		GetComponent<AudioSource>().Play ();
 		Destroy(other.gameObject);
 		Points.GetComponent<Points>().falls += 1;
 

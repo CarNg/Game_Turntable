@@ -3,6 +3,7 @@ using System.Collections;
 
 public class StartLose : MonoBehaviour {
 
+	public GameObject pauseObject;
 	public GameObject table;
 	public Texture lose;
 	public GameObject points;
@@ -22,6 +23,7 @@ public class StartLose : MonoBehaviour {
 	void Update () {
 		if (Input.GetButtonDown ("Jump") && startMenu) {
 			play();
+			pauseObject.SetActive (true);
 		}
 		else if (Input.GetKeyDown ("r") && loseMenu){
 			Application.LoadLevel(Application.loadedLevel);
@@ -38,11 +40,12 @@ public class StartLose : MonoBehaviour {
 
 	public void lost(){
 		loseMenu = true;
+		pauseObject.SetActive (false);
 		gameObject.GetComponent<GUIText>().text = points.GetComponent<Points>().points.ToString();
 		jack.GetComponent<FireProjectile> ().stop ();
 		table.GetComponent<BoardRotate> ().enabled = false;
 		table.GetComponent<AudioSource> ().enabled = false;
-		guiTexture.texture = lose;
+		GetComponent<GUITexture>().texture = lose;
 		gameObject.GetComponent<GUITexture> ().enabled = true;
 	}
 }
