@@ -1,5 +1,5 @@
 # Turntable
-For a more refined version of Turntable, check out 'Game_Arcade'.
+For a more refined version of Turntable, check out 'game-arcade'.
 
 Turntable is a physics game inspired by pinball, pachinko and peggle but with a twist. The goal of the game is to get the high score by guiding the balls into the corresponding score pockets. Lose all three lives by letting them fall into the side pockets and you’ve lost.
 
